@@ -216,7 +216,7 @@ export class MongoStorage implements IStorage {
       ...insertTransaction, 
       id,
       createdAt: now,
-      billerName: insertTransaction.billerName || 'Sriram',
+      billerName: insertTransaction.billerName || 'INWORA DEMO',
       extras: insertTransaction.extras || null,
       splitPayment: insertTransaction.splitPayment || null,
       creditor: insertTransaction.creditor || null

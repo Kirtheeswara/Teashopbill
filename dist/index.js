@@ -189,7 +189,7 @@ var MongoStorage = class {
       ...insertTransaction,
       id,
       createdAt: now,
-      billerName: insertTransaction.billerName || "Sriram",
+      billerName: insertTransaction.billerName || "INWORA DEMO",
       extras: insertTransaction.extras || null,
       splitPayment: insertTransaction.splitPayment || null,
       creditor: insertTransaction.creditor || null
@@ -543,7 +543,7 @@ var MemStorage = class {
       ...insertTransaction,
       id,
       createdAt: now,
-      billerName: insertTransaction.billerName || "Sriram",
+      billerName: insertTransaction.billerName || "INWORA DEMO",
       extras: insertTransaction.extras || null,
       splitPayment: insertTransaction.splitPayment || null
     };
@@ -792,7 +792,7 @@ var transactions = pgTable("transactions", {
   totalAmount: decimal("total_amount", { precision: 10, scale: 2 }).notNull(),
   paymentMethod: text("payment_method").notNull(),
   // 'gpay', 'cash', 'split', or 'creditor'
-  billerName: text("biller_name").notNull().default("Sriram"),
+  billerName: text("biller_name").notNull().default("INWORA DEMO"),
   splitPayment: jsonb("split_payment"),
   // {gpayAmount: number, cashAmount: number} for split payments
   extras: jsonb("extras"),

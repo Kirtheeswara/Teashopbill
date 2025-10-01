@@ -78,9 +78,9 @@ export default function InvoicePage() {
               <div>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                    <Coffee className="text-2xl" />
+                    <img src="/logo.png" alt="Logo" className="w-8 h-8 rounded" />
                   </div>
-                  <h2 className="text-3xl font-bold" data-testid="invoice-app-name">Chai-Fi</h2>
+                  <h2 className="text-3xl font-bold" data-testid="invoice-app-name">INWORA DEMO</h2>
                 </div>
                 <p className="opacity-90" data-testid="invoice-tagline">Modern Billing Solution</p>
               </div>
@@ -219,8 +219,8 @@ export default function InvoicePage() {
 
             {/* Footer */}
             <div className="mt-8 pt-6 border-t border-border text-center">
-              <p className="text-muted-foreground text-sm" data-testid="text-thank-you">Thank you for choosing Chai-Fi!</p>
-              <p className="text-muted-foreground text-xs mt-1" data-testid="text-support">For support, contact us at support@chai-fi.com</p>
+              <p className="text-muted-foreground text-sm" data-testid="text-thank-you">Thank you for choosing INWORA DEMO!</p>
+              <p className="text-muted-foreground text-xs mt-1" data-testid="text-support">For support, contact us at support@inwora-demo.com</p>
             </div>
           </CardContent>
         </Card>

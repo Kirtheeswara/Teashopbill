@@ -123,7 +123,7 @@ export default function PaymentPage() {
         items: cart,
         totalAmount: finalTotal.toFixed(2),
         paymentMethod,
-        billerName: "Sriram",
+        billerName: "INWORA DEMO",
         date: now.toISOString().split('T')[0],
         dayName: now.toLocaleDateString('en-US', { weekday: 'long' }),
         time: now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }),

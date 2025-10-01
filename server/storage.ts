@@ -196,7 +196,7 @@ export class MemStorage implements IStorage {
       ...insertTransaction, 
       id,
       createdAt: now,
-      billerName: insertTransaction.billerName || 'Sriram',
+      billerName: insertTransaction.billerName || 'INWORA DEMO',
       extras: insertTransaction.extras || null,
       splitPayment: insertTransaction.splitPayment || null
     };

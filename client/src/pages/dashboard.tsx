@@ -56,7 +56,7 @@ export default function DashboardPage() {
 
 
   // Prepare chart data with colors
-  const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff7300', '#00ff00', '#ff00ff', '#00ffff', '#ff0000', '#0000ff', '#ffff00'];
+  const COLORS = ['#0f4c81', '#1a65b5', '#3a8bde', '#76b3ff', '#bcd8ff'];
   
   const chartData = menuItemSales
     .filter(item => item.totalSold > 0) // Only show items with sales
@@ -475,7 +475,7 @@ export default function DashboardPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-              <div className="p-4 sm:p-6 invoice-gradient text-white rounded-xl">
+              <div className="p-4 sm:p-6 invoice-gradient text-primary-foreground rounded-xl">
                 <div className="mb-3 sm:mb-4">
                   <div className="text-xs sm:text-sm opacity-90" data-testid="text-month-period">
                     {currentMonth ? new Date(currentMonth.month + '-01').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : "No data"}
@@ -489,26 +489,26 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <div className="p-4 sm:p-6 bg-green-50 rounded-xl border border-green-200">
+              <div className="p-4 sm:p-6 bg-primary/10 rounded-xl border border-primary/30">
                 <div className="mb-3 sm:mb-4">
-                  <div className="text-xs sm:text-sm text-green-700" data-testid="text-month-gpay-label">GPay Payments</div>
-                  <div className="text-xl sm:text-2xl font-bold text-green-800" data-testid="text-month-gpay-total">
+                  <div className="text-xs sm:text-sm text-primary" data-testid="text-month-gpay-label">GPay Payments</div>
+                  <div className="text-xl sm:text-2xl font-bold text-primary" data-testid="text-month-gpay-total">
                     ₹{currentMonth?.gpayAmount || "0.00"}
                   </div>
                 </div>
-                <div className="text-xs sm:text-sm text-green-600" data-testid="text-month-gpay-percentage">
+                <div className="text-xs sm:text-sm text-primary" data-testid="text-month-gpay-percentage">
                   {currentMonth ? ((parseFloat(currentMonth.gpayAmount) / parseFloat(currentMonth.totalAmount)) * 100).toFixed(1) : 0}% of total
                 </div>
               </div>
 
-              <div className="p-4 sm:p-6 bg-gray-50 rounded-xl border border-gray-200">
+              <div className="p-4 sm:p-6 bg-primary/10 rounded-xl border border-primary/30">
                 <div className="mb-3 sm:mb-4">
-                  <div className="text-xs sm:text-sm text-gray-700" data-testid="text-month-cash-label">Cash Payments</div>
-                  <div className="text-xl sm:text-2xl font-bold text-gray-800" data-testid="text-month-cash-total">
+                  <div className="text-xs sm:text-sm text-primary" data-testid="text-month-cash-label">Cash Payments</div>
+                  <div className="text-xl sm:text-2xl font-bold text-primary" data-testid="text-month-cash-total">
                     ₹{currentMonth?.cashAmount || "0.00"}
                   </div>
                 </div>
-                <div className="text-xs sm:text-sm text-gray-600" data-testid="text-month-cash-percentage">
+                <div className="text-xs sm:text-sm text-primary" data-testid="text-month-cash-percentage">
                   {currentMonth ? ((parseFloat(currentMonth.cashAmount) / parseFloat(currentMonth.totalAmount)) * 100).toFixed(1) : 0}% of total
                 </div>
               </div>

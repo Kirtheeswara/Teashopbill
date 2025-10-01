@@ -24,7 +24,7 @@ export const transactions = pgTable("transactions", {
   items: jsonb("items").notNull(), // Array of {id, name, price, quantity}
   totalAmount: decimal("total_amount", { precision: 10, scale: 2 }).notNull(),
   paymentMethod: text("payment_method").notNull(), // 'gpay', 'cash', 'split', or 'creditor'
-  billerName: text("biller_name").notNull().default('Sriram'),
+  billerName: text("biller_name").notNull().default('INWORA DEMO'),
   splitPayment: jsonb("split_payment"), // {gpayAmount: number, cashAmount: number} for split payments
   extras: jsonb("extras"), // Array of {name: string, amount: number}
   creditor: jsonb("creditor"), // {name: string, totalAmount: number, paidAmount: number, balanceAmount: number} for creditor payments
